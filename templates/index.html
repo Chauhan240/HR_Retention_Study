@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Data Science Projects Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+         <!-- type="text/css"-->
+
+        <!--<link href="css/styles.css" rel="stylesheet" /> -->
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ url_for('static', filename='img/profile.jpg') }}"  alt="" /></span>
+                   <!-- "assets/img/profile.jpg" alt="" /></span>-->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"> About </a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Predict"> Model Prediction </a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#eda"> EDA </a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#modelcompare"> Model Comparisons </a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#fengg">Feature Eng.</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#fselect">Feature Selection</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#conclusions">Final Conclusions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Eishan
+                        <span class="text-primary">Sisodia</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Barclays Pune · Maharashtra- 411014 · +91-9923082200 ·
+                        <a href="mailto:name@email.com">eishansisodia@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">I have an overall experience of 9 years+.
+                    Technical skills include: Machine learning ,Python, Flask, Deep learning and NLP concepts, Oracle 12C DB, Autosys, Unix scripting, GIT 
+                    Have a stupendous knowledge on Statistics and Maths behind the Algorithms and various other Machine learning concepts.</p>
+                     <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            3 yrs exp in Machine learning
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            9 years in Oracle
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            2.5 yrs in ERP
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            3 yrs in Banking
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            4 yrs in investment Banking.
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                    <div class="social-icons">
+                        <a class="social-icon" href="{{params['ld_url']}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="{{params['gh_url']}}" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="{{params['tw_url']}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="{{params['fb_url']}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Predict-->
+            <section class="resume-section" id="Predict">
+                <div class="resume-section-content">
+                    <h2 class="mb-4">
+                        Retention Study to figure out employees that may quit
+                    </h2>
+                    <div class="subheading mb-3">
+                        Kindly fill the form to know whether the employee will retain or leave the company as per the different feature values and different model techniques.
+                    </div>
+
+<!-- Form Start -->
+                    <form name="sentMessage" id="contactForm" method="post" novalidate>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                          <label>Number of Projects</label>
+                          <input type="number" class="form-control" placeholder="Number of Projects" id="project" name="project" required data-validation-required-message="Please enter the number of Projects Employee has worked on">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                          <label>Average Monthly hours</label>
+                          <input type="number" class="form-control" placeholder="Average Monthly hours" id="hours" name="hours" required data-validation-required-message="Please enter Average Monthly hours Employee has spent working.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                          <label>Years Spent in Company</label>
+                          <input type="number" class="form-control" placeholder="Years Spent in Company" name="yr_spent" id="yr_spent" required data-validation-required-message="Please enter no. of years spent by employee in company.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                          <label>No of Work Accidents</label>
+                          <input type="number" class="form-control" placeholder="No of Work Accidents" name="n_accident" id="n_accident" required data-validation-required-message="Please enter No of Work Accidents by Employee during his tenure.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                          <label>Promotions in last 5 years</label>
+                          <input type="number" class="form-control" placeholder="Promotions in last 5 years" name="n_promotion" id="n_promotion" required data-validation-required-message="Please enter the number of Promotions of employee in last 5 years.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                          <label>Last Evaluation</label>
+                          <input type="number" class="form-control" placeholder="Last Evaluation" name="evalu" id="evalu" required data-validation-required-message="Please enter employee's last Evaluation.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                          <label>Satisfaction Level</label>
+                          <input type="number" class="form-control" placeholder="Satisfaction Level" name="sat" id="sat" required data-validation-required-message="Please enter employee's Satisfaction Level as per the survey conducted.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                        <div class="form-group">
+                          <label for="dep">Department </label>
+                          <select class="form-control" name="dep" id="dep">
+                            <option value="sales">Sales</option>
+                            <option value="accounting">Accounting</option>
+                            <option value="hr">HR</option>
+                            <option value="technical">Technical</option>
+                            <option value="support">Support</option>
+                            <option value="management">Management</option>
+                            <option value="IT">IT</option>
+                            <option value="product_mng">Product_management</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="RandD">R n D</option>
+                          </select>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="salary">Salary </label>
+                          <select class="form-control" name="salary" id="salary">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                          </select>
+                        </div>
+                      <br>
+                      <div id="success"></div>
+                      <button type="submit" class="btn btn-primary" id="sendMessageButton">Predict</button>
+                    </form>
+<!-- Form End -->
+            <br><br><h3>{{ prediction_text }}<h3>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- eda-->
+            <section class="resume-section" id="eda">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Exploratory Data Analysis</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Below is the Heat map of corelation between the Features</h3>
+                            <div class="subheading mb-3">SNS Heat Map</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary"> To get an insight of correlation between the features</span></div>
+                    </div>
+                     <div>
+                        <img src= "{{ url_for('static', filename = 'img/heatmap_full.png') }}" >
+                        </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Model Comparision-->
+            <section class="resume-section" id="modelcompare">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Model Comparison Plots</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Below is the comparison of <span class="text-primary">ROC AUC Graph</span> of all the modeLs used </h3>
+                            <br>
+                            <br>
+                            <img src= "{{ url_for('static', filename = 'img/ROC_AUC_comparison.png') }}" >
+                            <br>
+                            <br>
+                            <h3 class="mb-0">Below is the comparison of <span class="text-primary">Precision Recall Graph</span> of all the modeLs used </h3>
+                            <br>
+                            <br>
+                            <img src= "{{ url_for('static', filename = 'img/Prec_recal_comparison.png') }}" >
+                            <br>
+                            <br>
+                            <h3 class="mb-0">Below is the comparison of <span class="text-primary">Discrimination Threshold Graph</span> of all the modeLs used </h3>
+                            <br>
+                            <br>
+                            <img src= "{{ url_for('static', filename = 'img/Discrimination_Threshold_comparison.png') }}" >
+                            <br>
+                            <br>
+                            <h3 class="mb-0">Below is the comparison of <span class="text-primary">CONFUSION MATRIX</span> of all the modeLs used </h3>
+                            <br>
+                            <img src= "{{ url_for('static', filename = 'img/confusion_matrix.png') }}" >
+                            <br>
+                            <br>
+                            <h3 class="mb-0">Below is the comparison of <span class="text-primary">CLASSIFICATION REPORT</span> of all the modeLs used </h3>
+                            <br>
+                            <img src= "{{ url_for('static', filename = 'img/classification_report.png') }}" >
+                            <br>
+                            <br>
+                            <h3 class="mb-0">Below is the <span class="text-primary"> TUNED DECISION TREE</span> formed </h3>
+                            <br>
+                            <img src= "{{ url_for('static', filename = 'img/DT_Tuned.png') }}" >
+                            <br>
+                            <br>
+                            <h3 class="mb-0">Below is the <span class="text-primary">DECISION TREE</span> formed before tuning </h3>
+                            <br>
+                            <img src= "{{ url_for('static', filename = 'img/DT_without_tune.png') }}" >
+                            <br>
+                            <br>
+                            <h3 class="mb-0">Below is the <span class="text-primary">statmodel Logit summary</span> to have an indepth intution of the features for a linear approach </h3>
+                            <br>
+                            <img src= "{{ url_for('static', filename = 'img/OLS_Summary.png') }}" >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Fengg-->
+            <section class="resume-section" id="fengg">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Applied Feature Engineering Techniques :</h2>
+                    <div class="subheading mb-3">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Applied Standard scaling
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Applied one hot encoding
+                        </li>
+
+
+                    </div>
+                    <!-- <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Agile Development & Scrum
+                        </li>
+                    </ul>-->
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Fselect-->
+            <section class="resume-section" id="fselect">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Feature Importance </h2>
+                    <h3>We can see the feature importance in decreasing order below:.</h3>
+                    <br>
+                    <h4>As per the Random Forest : </h4>
+                    <img src= "{{ url_for('static', filename = 'img/Feature_importance_RF.png') }}" >
+                    <h4>As per Decision Tree : </h4>
+                    <img src= "{{ url_for('static', filename = 'img/Feature_importance_DT.png') }}" >
+                </div>
+
+</section>
+
+            <hr class="m-0" />
+            <!-- Conclusions-->
+            <section class="resume-section" id="conclusions">
+                <div class="resume-section-content">
+                    <h3 class="mb-5">Conclusion<br>
+                     </h3>
+                    <div class="subheading mb-3">
+                    Considering the ROC AUC Graph, and accuracy all together, the best model to choose is XG Boost.<br>
+                    Ensemble technique seems to be the best technique working here.
+                    </div>
+                  <!-- Conclusions  <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Google Analytics Certified Developer
+                        </li> -->
+                    <!-- Conclusions</ul> -->
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        
+    </body>
+</html>

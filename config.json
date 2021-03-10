@@ -1,0 +1,11 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "fb_url": "https://www.facebook.com/eishansisodia",
+    "tw_url": "https://twitter.com/EishanSisodia",
+    "gh_url": "https://github.com/eishansisodia",
+    "ld_url": "https://www.linkedin.com/in/eishan-sisodia-1845b238",
+    "gmail-user": "eishansisodia@gmail.com"
+  }
+}
